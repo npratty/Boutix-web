@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Outlet } from "react-router-dom";
+
 
 const Profile = () => {
   const [name, setName] = useState(" ");
@@ -99,6 +101,8 @@ const Profile = () => {
               Change Password
             </a>
           </div>
+          <Outlet />
+
         </div>
       </div>
     </div>

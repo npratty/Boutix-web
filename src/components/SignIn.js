@@ -2,6 +2,7 @@ import "../App.css";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Alert } from "react-bootstrap";
+import { Outlet } from "react-router-dom";
 
 function SignIn() {
   const navigate = useNavigate();
@@ -13,7 +14,7 @@ function SignIn() {
     e.preventDefault(e);
     var pattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
     const isValidEmail = true;
-        // email.match(pattern);
+    // email.match(pattern);
 
     if (!isValidEmail) {
       setErrMsg("Enter valid email");
@@ -126,21 +127,22 @@ function SignIn() {
                     <a
                       className="gx-btn gx-btn-rounded "
                       onClick={() => navigate("/signup")}
-                      style={{justifyContent:"center",display:"flex" }}
-
+                      style={{ justifyContent: "center", display: "flex" }}
                     >
-                     <p style={{color:"#3f51b5"}}> New to Boutix? Create an account</p>
+                      <p style={{ color: "#3f51b5" }}>
+                        {" "}
+                        New to Boutix? Create an account
+                      </p>
                     </a>
                   </form>
                 </div>
               </div>
             </div>
           </div>
+          <Outlet />
         </div>
       </div>
     </div>
   );
 }
 export default SignIn;
-
-

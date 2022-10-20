@@ -1,8 +1,9 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 
 const Cart = () => {
   return (
-    <div style={{overflow:"auto"}}>
+    <div style={{ overflow: "auto" }}>
       <div class="gx-main-content">
         <div class="gx-wrapper">
           <div class="animated slideInUpTiny animation-duration-3">
@@ -267,6 +268,7 @@ const Cart = () => {
               </div>
             </div>
           </div>
+          <Outlet />
         </div>
       </div>
     </div>
