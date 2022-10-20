@@ -12,7 +12,8 @@ function SignIn() {
   const signIn = (e) => {
     e.preventDefault(e);
     var pattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
-    const isValidEmail = email.match(pattern);
+    const isValidEmail = true;
+        // email.match(pattern);
 
     if (!isValidEmail) {
       setErrMsg("Enter valid email");
@@ -21,7 +22,7 @@ function SignIn() {
 
     let url = "?";
     const data = { email: email, password: password };
-    navigate("../home");
+    navigate("/home");
 
     //     const response = signin(url, data);
     //     if (response.succeess) {
