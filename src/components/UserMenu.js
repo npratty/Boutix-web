@@ -44,7 +44,7 @@ const UserMenu = () => {
         <RowMenuItem>
           <div className="link d-flex align-items-center">
             <Icon name="person" style={{ fontSize: "20px" }} />
-            <span className="ml-1" onClick={() => navigate("../profile")}>
+            <span className="ml-1" onClick={() => navigate("/home/profile")}>
               {" "}
               Profile{" "}
             </span>

@@ -1,9 +1,7 @@
-import React, { Profiler } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Boutiques from "./Boutiques";
+import { Outlet } from "react-router-dom";
+import React  from "react";
 import LeftNav from "./LeftNav";
 import TopNav from "./TopNav";
-import Profile from "./Profile";
 
 
 function Main() {
@@ -14,10 +12,7 @@ function Main() {
         <TopNav />
         <div className="gx-main-content">
           <div className="gx-wrapper">
-              <Routes>
-              <Route path="/" element={< Boutiques/>} />
-              <Route path="/profile" element={< Profile/>} />
-              </Routes>
+              <Outlet />
           </div>
         </div>
       </div>
