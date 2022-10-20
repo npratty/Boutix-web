@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "../App.css";
+import Cart from "./Cart";
 import Main from "./Main";
 import Profile from "./Profile";
 import SignIn from "./SignIn";
@@ -13,15 +14,14 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/signin" element={<SignIn />} />
-        <Route path="/home" element={<Main />} >
-            <Route path="" element={<Boutiques/>} />
-          <Route path="profile" element={<Profile/>} />
+        <Route path="/" element={<Main />}>
+          <Route path="" element={<Boutiques />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/store" element={<Store />} />
+          <Route path="/cart" element={<Cart />} />
         </Route>
+        <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
-        //After finish add to main.js
-        <Route path="/store" element={<Store />} />
-        <Route path="/" element={<SignIn />} />
-
       </Routes>
     </BrowserRouter>
   );

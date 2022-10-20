@@ -5,6 +5,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import Alert from "react-bootstrap/Alert";
 import { useNavigate } from "react-router-dom";
 import Form from "react-bootstrap/Form";
+import { Outlet } from "react-router-dom";
 
 function SignUp() {
   const navigate = useNavigate();
@@ -217,12 +218,12 @@ function SignUp() {
 
                   <div
                     className="form-group"
-                    style={{ justifyContent: "center", display: "flex" ,}}
+                    style={{ justifyContent: "center", display: "flex" }}
                   >
-                      <button
-                        type="submit"
-                        className="gx-btn gx-btn-rounded gx-btn-primary "
-                      >
+                    <button
+                      type="submit"
+                      className="gx-btn gx-btn-rounded gx-btn-primary "
+                    >
                       Sign up
                     </button>
                   </div>
@@ -240,6 +241,7 @@ function SignUp() {
               </div>
             </div>
           </div>
+          <Outlet />
         </div>
       </div>
     </div>

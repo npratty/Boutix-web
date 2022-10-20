@@ -107,13 +107,11 @@
   float: right;
   padding: 10px;
 }
-.link{
-
-
+.link {
   color: #3f51b5 !important;
-   cursor: pointer;;
+  cursor: pointer;
 }
 
-.header-notifications > li > a{
+.header-notifications > li > a {
   font-size: unset;
 }

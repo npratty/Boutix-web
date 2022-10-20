@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
+import { Outlet } from "react-router-dom";
 
 const Store = () => {
   const [store, setStore] = useState("");
@@ -32,7 +33,7 @@ const Store = () => {
           </div>
 
           <Modal show={show} onHide={handleClose}>
-            <Modal.Header  closeButton > 
+            <Modal.Header closeButton>
               <Modal.Title>Create Store</Modal.Title>
             </Modal.Header>
             <Modal.Body>
@@ -102,6 +103,7 @@ const Store = () => {
           </Modal>
         </div>
       )}
+      <Outlet />
     </div>
   );
 };
